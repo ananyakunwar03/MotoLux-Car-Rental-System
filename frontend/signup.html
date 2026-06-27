@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rento | SignUp</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="shortcut icon" href="./assests/favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!--NAVBAR-->
+  <nav class="navbar">
+    <div class="logo">Rento</div>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="./src/pages/two-seaterPage.html">2-Seater Cars</a></li>
+          <li><a href="./src/pages/five-seaterPage.html">5-Seater Cars</a></li>
+          <li><a href="./src/pages/seven-seaterPage.html">7-Seater Cars</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./feedback.html">Feedback</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a id="userBtn" href="./login.html" class="btn btn-login">Login/Signup</a>
+      <a id="adminBtn" href="/frontend/admin/login.html" class="btn btn-secondary" target="_blank">Admin Panel</a>
+    </div>
+    
+  </nav>
+  <!--nav end-->
+
+  <!-- SIGNUP SECTION -->
+  <section class="signup-section">
+    <div class="signup-container">
+      <h2>Create Your Account</h2>
+      <p>Join Rento and enjoy smarter journeys every day!</p>
+
+      <form class="signup-form">
+
+        <div class="input-box">
+          <i class="fa fa-user"></i>
+          <input id="signup-name" type="text" placeholder="Full Name" required>
+        </div>
+
+        <div class="input-box">
+          <i class="fa fa-envelope"></i>
+          <input id="signup-email" type="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-box">
+          <i class="fa fa-phone"></i>
+          <input id="signup-phone" type="text" placeholder="Phone Number" required>
+        </div>
+
+        <div class="input-box">
+          <i class="fa fa-lock"></i>
+          <input id="signup-password" type="password" placeholder="Password" required>
+        </div>
+      <button type="submit" class="signup-btn">Sign Up</button>
+
+      <p class="login-link">Already have an account? <a href="./login.html">Login</a></p>
+      </form>
+
+      <!-- Error Message (hidden by default) -->
+      <div id="error-message" class="message error-message" style="display: none;"></div>
+    </div>
+  </section>
+
+  <!-- Success Modal (hidden by default) -->
+  <div id="success-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>🎉 Account Created Successfully!</h2>
+      <p>Welcome to Rento! Your account has been created. You can now log in to start booking cars.</p>
+      <button id="close-modal" class="modal-btn">Go to Login</button>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!--footer-->
+  <footer class="rento-footer">
+  <div class="footer-content">
+
+    <!-- Brand + About -->
+    <div class="footer-box">
+      <h2 class="f-logo">Rento</h2>
+      <p>Affordable & easy self-drive car rentals with verified partners and 24/7 support.</p>
+
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/16kbsf5c6w/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/rentocar_rental?igsh=dWJ5dDNzeml5OGpp"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/rentocarrentals" ><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <ul class="f-contact">
+        <li><i class="fas fa-location-dot"></i> Hauz Khas, Delhi</li>
+        <li><i class="fas fa-envelope"></i>
+           <a href="mailto:rentocarrentals@gmail.com">rentocarrentals@gmail.com</a>
+        </li>
+        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">© 2025 Rento. All Rights Reserved.</div>
+</footer>
+
+<script src="http://localhost:5000/frontend/signup.js"></script>
+
+</body>
+</html>

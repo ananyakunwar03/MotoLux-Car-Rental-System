@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rento | Booking</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="shortcut icon" href="./assests/favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!--NAVBAR-->
+  <nav class="navbar">
+    <div class="logo">Rento</div>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+
+
+      <li class="dropdown">
+        <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="./src/pages/two-seaterPage.html">2-Seater Cars</a></li>
+          <li><a href="./src/pages/five-seaterPage.html">5-Seater Cars</a></li>
+          <li><a href="./src/pages/seven-seaterPage.html">7-Seater Cars</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./feedback.html">Feedback</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a id="userBtn" href="./login.html" class="btn btn-login">Login/Signup</a>
+      <a id="adminBtn" href="/frontend/admin/login.html" class="btn btn-secondary" target="_blank">Admin Panel</a>
+    </div>
+
+  </nav>
+  <!--nav end-->
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-container booking-bg">
+
+    <!-- LEFT SIDE -->
+    <div class="booking-left">
+      <div class="glass-panel">
+        <h2>Book Your Car</h2>
+        <p class="sub">Fill the form to reserve your ride</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE - FORM -->
+    <div class="booking-right">
+      <form class="booking-form">
+        <div class="form-group">
+          <label>Pickup Location</label>
+          <input type="text" name="pickupLocation" placeholder="Enter pickup address" required>
+        </div>
+
+        <div class="form-group">
+          <label>Drop Location</label>
+          <input type="text" name="dropLocation" placeholder="Enter drop address" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Pickup Date</label>
+            <input type="date" name="pickupDate" required>
+          </div>
+
+          <div class="form-group">
+            <label>Pickup Time</label>
+            <input type="time" name="pickupTime" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Return Date</label>
+            <input type="date" name="returnDate" required>
+          </div>
+
+          <div class="form-group">
+            <label>Return Time</label>
+            <input type="time" name="returnTime" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Select Car</label>
+          <select required id="car-select" name="car-select">
+            <option value="">Choose Car</option>
+            <!-- Options will be populated by JavaScript -->
+          </select>
+        </div>
+
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+  </section>
+
+  <!--footer-->
+  <footer class="rento-footer">
+    <div class="footer-content">
+
+      <!-- Brand + About -->
+      <div class="footer-box">
+        <h2 class="f-logo">Rento</h2>
+        <p>Affordable & easy self-drive car rentals with verified partners and 24/7 support.</p>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/16kbsf5c6w/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/rentocar_rental?igsh=dWJ5dDNzeml5OGpp"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/rentocarrentals"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-box">
+        <h3>Contact</h3>
+        <ul class="f-contact">
+          <li><i class="fas fa-location-dot"></i> Hauz Khas, Delhi</li>
+          <li><i class="fas fa-envelope"></i>
+            <a href="mailto:rentocarrentals@gmail.com">rentocarrentals@gmail.com</a>
+          </li>
+          <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">© 2025 Rento. All Rights Reserved.</div>
+  </footer>
+
+  <div id="success-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>✅ Booking Confirmed!</h2>
+      <p>Your car booking has been successfully submitted. We'll send you a confirmation email shortly.</p>
+      <button id="close-modal" class="modal-btn">OK</button>
+    </div>
+  </div>
+
+    <script src="http://localhost:5000/frontend/booking.js"></script>
+
+</body>
+
+</html>

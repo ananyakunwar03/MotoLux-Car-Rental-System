@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Ferrari 488 GTB",
+    "type": "two-seater",
+    "pricePerDay": 42000,
+    "available": true,
+    "image": "./assests/cars/2seater-2.jpeg"
+  },
+  {
+    "name": "BMW i8 Roadster",
+    "type": "two-seater",
+    "pricePerDay": 44000,
+    "available": true,
+    "image": "./assests/cars/2seater-4.jpeg"
+  },
+  {
+    "name": "Mercedes-Benz AMG GT",
+    "type": "two-seater",
+    "pricePerDay": 45000,
+    "available": true,
+    "image": "./assests/cars/2seater-6.jpeg"
+  },
+  {
+    "name": "Mini Cooper",
+    "type": "five-seater",
+    "pricePerDay": 25000,
+    "available": true,
+    "image": "./assests/cars/5seater-4.jpeg"
+  },
+  {
+    "name": "Mahindra Thar",
+    "type": "five-seater",
+    "pricePerDay": 20000,
+    "available": true,
+    "image": "./assests/cars/5seater-3.jpeg"
+  },
+  {
+    "name": "Renault Kwid",
+    "type": "five-seater",
+    "pricePerDay": 15000,
+    "available": true,
+    "image": "./assests/cars/5seater-6.jpeg"
+  },
+  {
+    "name": "Mahindra Bolero",
+    "type": "seven-seater",
+    "pricePerDay": 18000,
+    "available": true,
+    "image": "./assests/cars/7seater-3.jpeg"
+  },
+  {
+    "name": "Toyota Fortuner",
+    "type": "seven-seater",
+    "pricePerDay": 35000,
+    "available": true,
+    "image": "./assests/cars/7seater-5.jpeg"
+  },
+  {
+    "name": "Renault Triber",
+    "type": "seven-seater",
+    "pricePerDay": 16000,
+    "available": true,
+    "image": "./assests/cars/7seater-8.jpeg"
+  }
+]

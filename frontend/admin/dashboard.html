@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Rento</title>
+    <meta name="description" content="Admin dashboard for Rento car rental system.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="shortcut icon" href="../assests/favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <section class="admin-dashboard">
+        <h1>Admin Dashboard</h1>
+        <nav class="admin-nav">
+            <a href="/frontend/admin/users.html">Manage Users</a>
+            <a href="/frontend/admin/cars.html">Manage Cars</a>
+            <a href="/frontend/admin/bookings.html">Manage Bookings</a>
+            <a href="/frontend/admin/contacts.html">Manage Contacts</a>
+            <a href="/frontend/admin/feedback.html">Manage Feedback</a>
+        </nav>
+
+        <div class="stats" id="stats-container">
+            <!-- Stats will be loaded here -->
+        </div>
+        <button class="logout-btn" id="logout-btn">Logout</button>
+    </section>
+
+    <script>
+        const token = localStorage.getItem('adminToken');
+        if (!token) {
+            window.location.href = 'login.html';
+        }
+
+        // Load stats
+        async function loadStats() {
+            try {
+                const res = await fetch('http://localhost:5000/api/admin/stats', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                if (!res.ok) throw new Error('Failed to load stats');
+                const stats = await res.json();
+                document.getElementById('stats-container').innerHTML = `
+                    <div class="stat">
+                        <h3>Total Users</h3>
+                        <p>${stats.totalUsers}</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Cars</h3>
+                        <p>${stats.totalCars}</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Bookings</h3>
+                        <p>${stats.totalBookings}</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Contacts</h3>
+                        <p>${stats.totalContacts}</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Feedbacks</h3>
+                        <p>${stats.totalFeedback}</p>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                document.getElementById('stats-container').innerHTML = '<p>Error loading stats.</p>';
+            }
+        }
+
+        // Logout
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('adminToken');
+            window.location.href = 'login.html';
+        });
+
+        loadStats();
+    </script>
+</body>
+
+</html>

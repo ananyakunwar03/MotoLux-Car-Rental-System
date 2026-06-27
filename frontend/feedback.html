@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rento | Feedback</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="shortcut icon" href="./assests/favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body class="feedback-page">
+  <!--NAVBAR-->
+  <nav class="navbar">
+    <div class="logo">Rento</div>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+
+
+      <li class="dropdown">
+        <a href="./services.html">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="./src/pages/two-seaterPage.html">2-Seater Cars</a></li>
+          <li><a href="./src/pages/five-seaterPage.html">5-Seater Cars</a></li>
+          <li><a href="./src/pages/seven-seaterPage.html">7-Seater Cars</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./feedback.html">Feedback</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a id="userBtn" href="./login.html" class="btn btn-login">Login/Signup</a>
+      <a id="adminBtn" href="/frontend/admin/login.html" class="btn btn-secondary" target="_blank">Admin Panel</a>
+    </div>
+
+  </nav>
+  <!--nav end-->
+
+  <!-- FEEDBACK FORM SECTION -->
+  <section class="feedback-section">
+    <h2 class="feedback-heading">We Value Your Feedback</h2>
+
+    <form id="feedbackForm" class="feedback-form">
+
+      <label>Name</label>
+      <input type="text" id="name" required placeholder="Enter your name">
+
+      <label>Email</label>
+      <input type="email" id="email" required placeholder="Enter your email">
+
+      <label>Booking ID / Rental ID</label>
+      <input type="text" id="bookingId" required placeholder="Enter booking ID">
+
+      <label>Car Model Rented</label>
+      <select id="carModel" required>
+        <option value="" disabled selected>Select Car Model</option>
+      </select>
+
+      <label>Overall Experience (1-5)</label>
+      <select id="overallExp" required>
+        <option value="" disabled selected>Select Rating</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+      <label>Car Condition (1-5)</label>
+      <select id="carCondition" required>
+        <option value="" disabled selected>Select Rating</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+      <label>Ease of Booking Process (1-5)</label>
+      <select id="easeBooking" required>
+        <option value="" disabled selected>Select Rating</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+      <label>Pickup & Dropoff (1-5)</label>
+      <select id="pickupDrop" required>
+        <option value="" disabled selected>Select Rating</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+      <label>Customer Support (1-5)</label>
+      <select id="customerSupport" required>
+        <option value="" disabled selected>Select Rating</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+      <label>Value for Money (1-5)</label>
+      <select id="valueMoney" required>
+        <option value="" disabled selected>Select Rating</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+      <label>Did You Face Any Issues With the Car?</label>
+      <select id="issuesCar" required>
+        <option value="" disabled selected>Select Option</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>What Can We Improve?</label>
+      <textarea id="improve" placeholder="Your suggestions..."></textarea>
+
+      <label>Likelihood to Recommend Us (1-5)</label>
+      <select id="recommend" required>
+        <option value="" disabled selected>Select Rating</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+  </section>
+
+  <!--footer-->
+  <footer class="rento-footer">
+    <div class="footer-content">
+
+      <!-- Brand + About -->
+      <div class="footer-box">
+        <h2 class="f-logo">Rento</h2>
+        <p>Affordable & easy self-drive car rentals with verified partners and 24/7 support.</p>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/16kbsf5c6w/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/rentocar_rental?igsh=dWJ5dDNzeml5OGpp"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/rentocarrentals"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-box">
+        <h3>Contact</h3>
+        <ul class="f-contact">
+          <li><i class="fas fa-location-dot"></i> Hauz Khas, Delhi</li>
+          <li><i class="fas fa-envelope"></i>
+            <a href="mailto:rentocarrentals@gmail.com">rentocarrentals@gmail.com</a>
+          </li>
+          <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">© 2025 Rento. All Rights Reserved.</div>
+  </footer>
+
+  <div id="success-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>☺️ Feedback Submitted!</h2>
+      <p>Thank you for your feedback! We appreciate your input and will use it to improve our services.</p>
+      <button id="close-modal" class="modal-btn">OK</button>
+    </div>
+  </div>
+
+  <script src="http://localhost:5000/frontend/feedback.js"></script>
+
+</body>
+</html>

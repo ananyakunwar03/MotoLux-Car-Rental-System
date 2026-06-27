@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rento | Contact</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="shortcut icon" href="./assests/favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!--NAVBAR-->
+  <nav class="navbar">
+    <div class="logo">Rento</div>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="./src/pages/two-seaterPage.html">2-Seater Cars</a></li>
+          <li><a href="./src/pages/five-seaterPage.html">5-Seater Cars</a></li>
+          <li><a href="./src/pages/seven-seaterPage.html">7-Seater Cars</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./feedback.html">Feedback</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a id="userBtn" href="./login.html" class="btn btn-login">Login/Signup</a>
+      <a id="adminBtn" href="/frontend/admin/login.html" class="btn btn-secondary" target="_blank">Admin Panel</a>
+    </div>
+
+  </nav>
+  <!--nav end-->
+
+  <!-- CONTACT SECTION -->
+  <main class="contact-page">
+
+    <div class="contact-inner">
+
+      <section class="contact-hero">
+        <div class="contact-hero-inner">
+          <h1>Get in touch</h1>
+          <p>Questions, feedback or booking help? Send us a message and we'll get back to you shortly.</p>
+        </div>
+      </section>
+
+      <section class="contact-container">
+        <div class="contact-card">
+          <form id="contactForm" class="contact-form" autocomplete="off" novalidate>
+            <h2>Contact Us</h2>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" pattern="[0-9+()\-\s]*" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can we help?" rows="6" required></textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-submit">Send Message</button>
+              <button type="reset" class="btn btn-reset">Reset</button>
+            </div>
+
+            <div id="formAlert" class="form-alert" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="contact-info">
+          <div class="info-block">
+            <h3>Office</h3>
+            <p>Hauz Khas, Delhi</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Call</h3>
+            <p>+91 9876543210</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Email</h3>
+            <p>rentocarrentals@gmail.com</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Hours</h3>
+            <p>Mon - Sat: 8:00 AM - 8:00 PM</p>
+          </div>
+        </aside>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!--footer-->
+  <footer class="rento-footer">
+    <div class="footer-content">
+
+      <!-- Brand + About -->
+      <div class="footer-box">
+        <h2 class="f-logo">Rento</h2>
+        <p>Affordable & easy self-drive car rentals with verified partners and 24/7 support.</p>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/16kbsf5c6w/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/rentocar_rental?igsh=dWJ5dDNzeml5OGpp"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/rentocarrentals"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-box">
+        <h3>Contact</h3>
+        <ul class="f-contact">
+          <li><i class="fas fa-location-dot"></i> Hauz Khas, Delhi</li>
+          <li><i class="fas fa-envelope"></i>
+            <a href="mailto:rentocarrentals@gmail.com">rentocarrentals@gmail.com</a>
+          </li>
+          <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">© 2025 Rento. All Rights Reserved.</div>
+  </footer>
+
+  <script src="http://localhost:5000/frontend/contact.js"></script>
+
+  <!-- Success Modal for Contact (hidden by default) -->
+  <div id="success-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>📩 Message Sent!</h2>
+      <p>Your details have reached us, we will get back to you.</p>
+      <button id="close-modal" class="modal-btn">OK</button>
+    </div>
+  </div>
+
+</body>
+</html>
